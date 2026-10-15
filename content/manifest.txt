@@ -1,0 +1,14 @@
+# 読み込み順。新しいコンテンツファイルを作ったら、ここに1行足す。
+# 時代を足すファイルは、それを patch するファイルより前に置く。
+bands_names.js
+core_eras.js
+core_patch.js
+eras_pack2.js
+eras_pack3a.js
+eras_pack3b.js
+whispers_core.js
+whispers_pack2.js
+whispers_pack3.js
+endings.js
+job_icons.js
+changelog.js

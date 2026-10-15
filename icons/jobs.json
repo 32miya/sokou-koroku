@@ -1,0 +1,1088 @@
+[
+ {
+  "file": "job_001",
+  "job": "現代人／読めないものを読む者",
+  "eraId": "e2026",
+  "choice": 0
+ },
+ {
+  "file": "job_002",
+  "job": "現代人／水辺に引かれる者",
+  "eraId": "e2026",
+  "choice": 1
+ },
+ {
+  "file": "job_003",
+  "job": "現代人／地下で安らぐ者",
+  "eraId": "e2026",
+  "choice": 2
+ },
+ {
+  "file": "job_004",
+  "job": "現代人／火を見つめる者",
+  "eraId": "e2026",
+  "choice": 3
+ },
+ {
+  "file": "job_005",
+  "job": "現代人／空を仰ぐ者",
+  "eraId": "e2026",
+  "choice": 4
+ },
+ {
+  "file": "job_006",
+  "job": "鉄道の溶接工",
+  "eraId": "e1964",
+  "choice": 0
+ },
+ {
+  "file": "job_007",
+  "job": "遠洋マグロ船の船員",
+  "eraId": "e1964",
+  "choice": 1
+ },
+ {
+  "file": "job_008",
+  "job": "地下鉄工事の作業員",
+  "eraId": "e1964",
+  "choice": 2
+ },
+ {
+  "file": "job_009",
+  "job": "衛星中継の技術者",
+  "eraId": "e1964",
+  "choice": 3
+ },
+ {
+  "file": "job_010",
+  "job": "競技の記録係",
+  "eraId": "e1964",
+  "choice": 4
+ },
+ {
+  "file": "job_011",
+  "job": "代書屋",
+  "eraId": "e1946",
+  "choice": 0
+ },
+ {
+  "file": "job_012",
+  "job": "漁師",
+  "eraId": "e1946",
+  "choice": 1
+ },
+ {
+  "file": "job_013",
+  "job": "炭鉱夫",
+  "eraId": "e1946",
+  "choice": 2
+ },
+ {
+  "file": "job_014",
+  "job": "町の鍛冶屋",
+  "eraId": "e1946",
+  "choice": 3
+ },
+ {
+  "file": "job_015",
+  "job": "気象台の観測助手",
+  "eraId": "e1946",
+  "choice": 4
+ },
+ {
+  "file": "job_016",
+  "job": "新聞の植字工",
+  "eraId": "e1923",
+  "choice": 0
+ },
+ {
+  "file": "job_017",
+  "job": "横浜港の艀乗り",
+  "eraId": "e1923",
+  "choice": 1
+ },
+ {
+  "file": "job_018",
+  "job": "土木工夫",
+  "eraId": "e1923",
+  "choice": 2
+ },
+ {
+  "file": "job_019",
+  "job": "鉄工所の職工",
+  "eraId": "e1923",
+  "choice": 3
+ },
+ {
+  "file": "job_020",
+  "job": "東京天文台の計算手",
+  "eraId": "e1923",
+  "choice": 4
+ },
+ {
+  "file": "job_021",
+  "job": "新聞記者",
+  "eraId": "e1905",
+  "choice": 0
+ },
+ {
+  "file": "job_022",
+  "job": "連合艦隊の水兵",
+  "eraId": "e1905",
+  "choice": 1
+ },
+ {
+  "file": "job_023",
+  "job": "鉄道敷設の工夫",
+  "eraId": "e1905",
+  "choice": 2
+ },
+ {
+  "file": "job_024",
+  "job": "八幡製鉄所の職工",
+  "eraId": "e1905",
+  "choice": 3
+ },
+ {
+  "file": "job_025",
+  "job": "緯度観測所の観測員",
+  "eraId": "e1905",
+  "choice": 4
+ },
+ {
+  "file": "job_026",
+  "job": "官報の校正係",
+  "eraId": "e1889",
+  "choice": 0
+ },
+ {
+  "file": "job_027",
+  "job": "灯台守",
+  "eraId": "e1889",
+  "choice": 1
+ },
+ {
+  "file": "job_028",
+  "job": "鉄道工事の坑夫",
+  "eraId": "e1889",
+  "choice": 2
+ },
+ {
+  "file": "job_029",
+  "job": "ガス灯の点灯夫",
+  "eraId": "e1889",
+  "choice": 3
+ },
+ {
+  "file": "job_030",
+  "job": "帝国大学の学生",
+  "eraId": "e1889",
+  "choice": 4
+ },
+ {
+  "file": "job_031",
+  "job": "天文方の手伝い",
+  "eraId": "e1868",
+  "choice": 0
+ },
+ {
+  "file": "job_032",
+  "job": "北前船の水主",
+  "eraId": "e1868",
+  "choice": 1
+ },
+ {
+  "file": "job_033",
+  "job": "山師",
+  "eraId": "e1868",
+  "choice": 2
+ },
+ {
+  "file": "job_034",
+  "job": "神社の書記",
+  "eraId": "e1868",
+  "choice": 3
+ },
+ {
+  "file": "job_035",
+  "job": "反射炉の職人",
+  "eraId": "e1868",
+  "choice": 4
+ },
+ {
+  "file": "job_036",
+  "job": "浦賀の漁師",
+  "eraId": "e1853",
+  "choice": 0
+ },
+ {
+  "file": "job_037",
+  "job": "佐賀藩の鋳物職人",
+  "eraId": "e1853",
+  "choice": 1
+ },
+ {
+  "file": "job_038",
+  "job": "台場普請の人足",
+  "eraId": "e1853",
+  "choice": 2
+ },
+ {
+  "file": "job_039",
+  "job": "蘭学塾の塾生",
+  "eraId": "e1853",
+  "choice": 3
+ },
+ {
+  "file": "job_040",
+  "job": "瓦版の版元",
+  "eraId": "e1853",
+  "choice": 4
+ },
+ {
+  "file": "job_041",
+  "job": "花火師の見習い",
+  "eraId": "e1783",
+  "choice": 0
+ },
+ {
+  "file": "job_042",
+  "job": "硫黄掘り",
+  "eraId": "e1783",
+  "choice": 1
+ },
+ {
+  "file": "job_043",
+  "job": "銚子の舟子",
+  "eraId": "e1783",
+  "choice": 2
+ },
+ {
+  "file": "job_044",
+  "job": "天文塾の弟子",
+  "eraId": "e1783",
+  "choice": 3
+ },
+ {
+  "file": "job_045",
+  "job": "名主の書役",
+  "eraId": "e1783",
+  "choice": 4
+ },
+ {
+  "file": "job_046",
+  "job": "句会の書き役",
+  "eraId": "e1689",
+  "choice": 0
+ },
+ {
+  "file": "job_047",
+  "job": "海苔漁師",
+  "eraId": "e1689",
+  "choice": 1
+ },
+ {
+  "file": "job_048",
+  "job": "銀山の掘子",
+  "eraId": "e1689",
+  "choice": 2
+ },
+ {
+  "file": "job_049",
+  "job": "瓦焼きの職人",
+  "eraId": "e1689",
+  "choice": 3
+ },
+ {
+  "file": "job_050",
+  "job": "阿蘭陀通詞",
+  "eraId": "e1641",
+  "choice": 0
+ },
+ {
+  "file": "job_051",
+  "job": "港の小舟の船頭",
+  "eraId": "e1641",
+  "choice": 1
+ },
+ {
+  "file": "job_052",
+  "job": "ビードロ吹きの職人",
+  "eraId": "e1641",
+  "choice": 2
+ },
+ {
+  "file": "job_053",
+  "job": "遠見番所の番人",
+  "eraId": "e1641",
+  "choice": 3
+ },
+ {
+  "file": "job_054",
+  "job": "出島の石垣を積む石工",
+  "eraId": "e1641",
+  "choice": 4
+ },
+ {
+  "file": "job_055",
+  "job": "刀鍛冶",
+  "eraId": "e1600",
+  "choice": 0
+ },
+ {
+  "file": "job_056",
+  "job": "水軍の舟子",
+  "eraId": "e1600",
+  "choice": 1
+ },
+ {
+  "file": "job_057",
+  "job": "金山衆",
+  "eraId": "e1600",
+  "choice": 2
+ },
+ {
+  "file": "job_058",
+  "job": "陰陽師の弟子",
+  "eraId": "e1600",
+  "choice": 3
+ },
+ {
+  "file": "job_059",
+  "job": "右筆",
+  "eraId": "e1600",
+  "choice": 4
+ },
+ {
+  "file": "job_060",
+  "job": "鉄砲衆の火薬係",
+  "eraId": "e1582",
+  "choice": 0
+ },
+ {
+  "file": "job_061",
+  "job": "穴太衆の石工",
+  "eraId": "e1582",
+  "choice": 1
+ },
+ {
+  "file": "job_062",
+  "job": "廻船問屋の手代",
+  "eraId": "e1582",
+  "choice": 2
+ },
+ {
+  "file": "job_063",
+  "job": "陰陽師の門人",
+  "eraId": "e1582",
+  "choice": 3
+ },
+ {
+  "file": "job_064",
+  "job": "織田家の祐筆",
+  "eraId": "e1582",
+  "choice": 4
+ },
+ {
+  "file": "job_065",
+  "job": "軍配者（天気読み）",
+  "eraId": "e1560",
+  "choice": 0
+ },
+ {
+  "file": "job_066",
+  "job": "桶狭間の百姓",
+  "eraId": "e1560",
+  "choice": 1
+ },
+ {
+  "file": "job_067",
+  "job": "兵糧方の飯炊き",
+  "eraId": "e1560",
+  "choice": 2
+ },
+ {
+  "file": "job_068",
+  "job": "津島湊の舟子",
+  "eraId": "e1560",
+  "choice": 3
+ },
+ {
+  "file": "job_069",
+  "job": "神社の神職",
+  "eraId": "e1560",
+  "choice": 4
+ },
+ {
+  "file": "job_070",
+  "job": "島の刀鍛冶",
+  "eraId": "e1543",
+  "choice": 0
+ },
+ {
+  "file": "job_071",
+  "job": "水先案内人",
+  "eraId": "e1543",
+  "choice": 1
+ },
+ {
+  "file": "job_072",
+  "job": "塩硝づくり",
+  "eraId": "e1543",
+  "choice": 2
+ },
+ {
+  "file": "job_073",
+  "job": "寺の学僧",
+  "eraId": "e1543",
+  "choice": 3
+ },
+ {
+  "file": "job_074",
+  "job": "島主の右筆",
+  "eraId": "e1543",
+  "choice": 4
+ },
+ {
+  "file": "job_075",
+  "job": "公家に仕える女房",
+  "eraId": "e1467",
+  "choice": 0
+ },
+ {
+  "file": "job_076",
+  "job": "槍の鍛冶",
+  "eraId": "e1467",
+  "choice": 1
+ },
+ {
+  "file": "job_077",
+  "job": "丹波の山の案内人",
+  "eraId": "e1467",
+  "choice": 2
+ },
+ {
+  "file": "job_078",
+  "job": "連歌師",
+  "eraId": "e1467",
+  "choice": 3
+ },
+ {
+  "file": "job_079",
+  "job": "兵庫津の問丸",
+  "eraId": "e1467",
+  "choice": 4
+ },
+ {
+  "file": "job_080",
+  "job": "稲村ヶ崎の漁師",
+  "eraId": "e1333",
+  "choice": 0
+ },
+ {
+  "file": "job_081",
+  "job": "切通しの番人",
+  "eraId": "e1333",
+  "choice": 1
+ },
+ {
+  "file": "job_082",
+  "job": "鎌倉の刀鍛冶",
+  "eraId": "e1333",
+  "choice": 2
+ },
+ {
+  "file": "job_083",
+  "job": "八幡宮の社僧",
+  "eraId": "e1333",
+  "choice": 3
+ },
+ {
+  "file": "job_084",
+  "job": "軍記を書き溜める僧",
+  "eraId": "e1333",
+  "choice": 4
+ },
+ {
+  "file": "job_085",
+  "job": "松浦党の舟子",
+  "eraId": "e1274",
+  "choice": 0
+ },
+ {
+  "file": "job_086",
+  "job": "博多の鍛冶",
+  "eraId": "e1274",
+  "choice": 1
+ },
+ {
+  "file": "job_087",
+  "job": "山の案内人",
+  "eraId": "e1274",
+  "choice": 2
+ },
+ {
+  "file": "job_088",
+  "job": "神社の神官",
+  "eraId": "e1274",
+  "choice": 3
+ },
+ {
+  "file": "job_089",
+  "job": "寺の記録僧",
+  "eraId": "e1274",
+  "choice": 4
+ },
+ {
+  "file": "job_090",
+  "job": "問注所の書記",
+  "eraId": "e1221",
+  "choice": 0
+ },
+ {
+  "file": "job_091",
+  "job": "流人船の船頭",
+  "eraId": "e1221",
+  "choice": 1
+ },
+ {
+  "file": "job_092",
+  "job": "院に仕える鍛冶",
+  "eraId": "e1221",
+  "choice": 2
+ },
+ {
+  "file": "job_093",
+  "job": "山の杣人",
+  "eraId": "e1221",
+  "choice": 3
+ },
+ {
+  "file": "job_094",
+  "job": "天文博士の家人",
+  "eraId": "e1221",
+  "choice": 4
+ },
+ {
+  "file": "job_095",
+  "job": "海女",
+  "eraId": "e1185",
+  "choice": 0
+ },
+ {
+  "file": "job_096",
+  "job": "写経生",
+  "eraId": "e1185",
+  "choice": 3
+ },
+ {
+  "file": "job_097",
+  "job": "鏃鍛冶",
+  "eraId": "e1185",
+  "choice": 4
+ },
+ {
+  "file": "job_098",
+  "job": "砂金掘り",
+  "eraId": "e1124",
+  "choice": 0
+ },
+ {
+  "file": "job_099",
+  "job": "金箔を打つ職人",
+  "eraId": "e1124",
+  "choice": 1
+ },
+ {
+  "file": "job_100",
+  "job": "北の海の交易の船乗り",
+  "eraId": "e1124",
+  "choice": 2
+ },
+ {
+  "file": "job_101",
+  "job": "絵仏師",
+  "eraId": "e1124",
+  "choice": 3
+ },
+ {
+  "file": "job_102",
+  "job": "金字経を書く写経生",
+  "eraId": "e1124",
+  "choice": 4
+ },
+ {
+  "file": "job_103",
+  "job": "宮中の写本係",
+  "eraId": "e1008",
+  "choice": 0
+ },
+ {
+  "file": "job_104",
+  "job": "陰陽寮の天文生",
+  "eraId": "e1008",
+  "choice": 1
+ },
+ {
+  "file": "job_105",
+  "job": "瀬戸内の船頭",
+  "eraId": "e1008",
+  "choice": 2
+ },
+ {
+  "file": "job_106",
+  "job": "主殿寮の灯火係",
+  "eraId": "e1008",
+  "choice": 3
+ },
+ {
+  "file": "job_107",
+  "job": "鞍馬山の山伏",
+  "eraId": "e1008",
+  "choice": 4
+ },
+ {
+  "file": "job_108",
+  "job": "造宮職の測量役",
+  "eraId": "e794",
+  "choice": 0
+ },
+ {
+  "file": "job_109",
+  "job": "鋳物師",
+  "eraId": "e794",
+  "choice": 1
+ },
+ {
+  "file": "job_110",
+  "job": "淀川の舟人",
+  "eraId": "e794",
+  "choice": 2
+ },
+ {
+  "file": "job_111",
+  "job": "陰陽寮の官人",
+  "eraId": "e794",
+  "choice": 3
+ },
+ {
+  "file": "job_112",
+  "job": "官司の書記",
+  "eraId": "e794",
+  "choice": 4
+ },
+ {
+  "file": "job_113",
+  "job": "陰陽寮の学生",
+  "eraId": "e735",
+  "choice": 0
+ },
+ {
+  "file": "job_114",
+  "job": "渡来系の鍛冶",
+  "eraId": "e735",
+  "choice": 1
+ },
+ {
+  "file": "job_115",
+  "job": "史（ふひと）",
+  "eraId": "e735",
+  "choice": 2
+ },
+ {
+  "file": "job_116",
+  "job": "遣唐使船の水手",
+  "eraId": "e735",
+  "choice": 3
+ },
+ {
+  "file": "job_117",
+  "job": "銅山の掘り手",
+  "eraId": "e735",
+  "choice": 4
+ },
+ {
+  "file": "job_118",
+  "job": "書物を守った史",
+  "eraId": "e645",
+  "choice": 0
+ },
+ {
+  "file": "job_119",
+  "job": "鍛冶部の工人",
+  "eraId": "e645",
+  "choice": 1
+ },
+ {
+  "file": "job_120",
+  "job": "難波津の船人",
+  "eraId": "e645",
+  "choice": 2
+ },
+ {
+  "file": "job_121",
+  "job": "土木の民",
+  "eraId": "e645",
+  "choice": 3
+ },
+ {
+  "file": "job_122",
+  "job": "国博士の弟子",
+  "eraId": "e645",
+  "choice": 4
+ },
+ {
+  "file": "job_123",
+  "job": "国書を清書した史",
+  "eraId": "e607",
+  "choice": 0
+ },
+ {
+  "file": "job_124",
+  "job": "遣隋使船の水手",
+  "eraId": "e607",
+  "choice": 1
+ },
+ {
+  "file": "job_125",
+  "job": "瓦博士の弟子",
+  "eraId": "e607",
+  "choice": 2
+ },
+ {
+  "file": "job_126",
+  "job": "暦法を学ぶ学生",
+  "eraId": "e607",
+  "choice": 3
+ },
+ {
+  "file": "job_127",
+  "job": "石室を組む石工",
+  "eraId": "e607",
+  "choice": 4
+ },
+ {
+  "file": "job_128",
+  "job": "女王に仕える巫女",
+  "eraId": "e239",
+  "choice": 0
+ },
+ {
+  "file": "job_129",
+  "job": "遣魏使の船の漕ぎ手",
+  "eraId": "e239",
+  "choice": 1
+ },
+ {
+  "file": "job_130",
+  "job": "鏡磨きの職人",
+  "eraId": "e239",
+  "choice": 2
+ },
+ {
+  "file": "job_131",
+  "job": "墳丘を築く土木の民",
+  "eraId": "e239",
+  "choice": 3
+ },
+ {
+  "file": "job_132",
+  "job": "伊都国の文字係",
+  "eraId": "e239",
+  "choice": 4
+ },
+ {
+  "file": "job_133",
+  "job": "環濠を掘る者",
+  "eraId": "e180",
+  "choice": 0
+ },
+ {
+  "file": "job_134",
+  "job": "鉄器の鍛冶",
+  "eraId": "e180",
+  "choice": 1
+ },
+ {
+  "file": "job_135",
+  "job": "鉄を運ぶ海人",
+  "eraId": "e180",
+  "choice": 2
+ },
+ {
+  "file": "job_136",
+  "job": "物見櫓の見張り",
+  "eraId": "e180",
+  "choice": 3
+ },
+ {
+  "file": "job_137",
+  "job": "約束を覚える者",
+  "eraId": "e180",
+  "choice": 4
+ },
+ {
+  "file": "job_138",
+  "job": "奴国の海人",
+  "eraId": "e57",
+  "choice": 0
+ },
+ {
+  "file": "job_139",
+  "job": "印を隠した者",
+  "eraId": "e57",
+  "choice": 1
+ },
+ {
+  "file": "job_140",
+  "job": "銅矛の鋳物師",
+  "eraId": "e57",
+  "choice": 2
+ },
+ {
+  "file": "job_141",
+  "job": "王に仕える日読み",
+  "eraId": "e57",
+  "choice": 3
+ },
+ {
+  "file": "job_142",
+  "job": "漢字を読む通訳",
+  "eraId": "e57",
+  "choice": 4
+ },
+ {
+  "file": "job_143",
+  "job": "徐福船団の舵取り",
+  "eraId": "e219",
+  "choice": 0
+ },
+ {
+  "file": "job_144",
+  "job": "方士",
+  "eraId": "e219",
+  "choice": 1
+ },
+ {
+  "file": "job_145",
+  "job": "環濠集落の長",
+  "eraId": "e219",
+  "choice": 3
+ },
+ {
+  "file": "job_146",
+  "job": "秦の書記",
+  "eraId": "e219",
+  "choice": 4
+ },
+ {
+  "file": "job_147",
+  "job": "田を拓く者",
+  "eraId": "e300",
+  "choice": 0
+ },
+ {
+  "file": "job_148",
+  "job": "稲を運んだ舟人",
+  "eraId": "e300",
+  "choice": 1
+ },
+ {
+  "file": "job_149",
+  "job": "金属の道具を作る者",
+  "eraId": "e300",
+  "choice": 2
+ },
+ {
+  "file": "job_150",
+  "job": "種まきの日を読む者",
+  "eraId": "e300",
+  "choice": 3
+ },
+ {
+  "file": "job_151",
+  "job": "言葉を通わせる者",
+  "eraId": "e300",
+  "choice": 4
+ },
+ {
+  "file": "job_152",
+  "job": "鴉と星を読む者",
+  "eraId": "e660",
+  "choice": 0
+ },
+ {
+  "file": "job_153",
+  "job": "東征の船団の水夫",
+  "eraId": "e660",
+  "choice": 1
+ },
+ {
+  "file": "job_154",
+  "job": "霊剣を鍛える者",
+  "eraId": "e660",
+  "choice": 2
+ },
+ {
+  "file": "job_155",
+  "job": "岩穴に住む土地の民",
+  "eraId": "e660",
+  "choice": 3
+ },
+ {
+  "file": "job_156",
+  "job": "語部（かたりべ）",
+  "eraId": "e660",
+  "choice": 4
+ },
+ {
+  "file": "job_157",
+  "job": "土偶の作り手",
+  "eraId": "e1000bc",
+  "choice": 0
+ },
+ {
+  "file": "job_158",
+  "job": "翡翠の加工師",
+  "eraId": "e1000bc",
+  "choice": 1
+ },
+ {
+  "file": "job_159",
+  "job": "海の獣を狩る者",
+  "eraId": "e1000bc",
+  "choice": 2
+ },
+ {
+  "file": "job_160",
+  "job": "石を並べて日を読む者",
+  "eraId": "e1000bc",
+  "choice": 3
+ },
+ {
+  "file": "job_161",
+  "job": "結び目で数を覚える者",
+  "eraId": "e1000bc",
+  "choice": 4
+ },
+ {
+  "file": "job_162",
+  "job": "土器の焼き手",
+  "eraId": "e3000",
+  "choice": 0
+ },
+ {
+  "file": "job_163",
+  "job": "黒曜石の掘り手",
+  "eraId": "e3000",
+  "choice": 1
+ },
+ {
+  "file": "job_164",
+  "job": "夜の見張り",
+  "eraId": "e3000",
+  "choice": 2
+ },
+ {
+  "file": "job_165",
+  "job": "丸木舟の漕ぎ手",
+  "eraId": "e3000",
+  "choice": 3
+ },
+ {
+  "file": "job_166",
+  "job": "語り部",
+  "eraId": "e3000",
+  "choice": 4
+ },
+ {
+  "file": "job_167",
+  "job": "貝を採る者",
+  "eraId": "e4000bc",
+  "choice": 0
+ },
+ {
+  "file": "job_168",
+  "job": "高台へムラを移す者",
+  "eraId": "e4000bc",
+  "choice": 1
+ },
+ {
+  "file": "job_169",
+  "job": "燻製をつくる者",
+  "eraId": "e4000bc",
+  "choice": 2
+ },
+ {
+  "file": "job_170",
+  "job": "月と潮を読む者",
+  "eraId": "e4000bc",
+  "choice": 3
+ },
+ {
+  "file": "job_171",
+  "job": "貝塚に刻み目を残す者",
+  "eraId": "e4000bc",
+  "choice": 4
+ },
+ {
+  "file": "job_172",
+  "job": "山の火を読む者",
+  "eraId": "e5300",
+  "choice": 0
+ },
+ {
+  "file": "job_173",
+  "job": "海を越えて逃れた民",
+  "eraId": "e5300",
+  "choice": 1
+ },
+ {
+  "file": "job_174",
+  "job": "洞窟へ導く者",
+  "eraId": "e5300",
+  "choice": 2
+ },
+ {
+  "file": "job_175",
+  "job": "星を失った見張り",
+  "eraId": "e5300",
+  "choice": 3
+ },
+ {
+  "file": "job_176",
+  "job": "災いを歌で伝える者",
+  "eraId": "e5300",
+  "choice": 4
+ },
+ {
+  "file": "job_177",
+  "job": "海辺の民",
+  "eraId": "e10900",
+  "choice": 0
+ },
+ {
+  "file": "job_178",
+  "job": "星を刻む者",
+  "eraId": "e10900",
+  "choice": 1
+ },
+ {
+  "file": "job_179",
+  "job": "門番",
+  "eraId": "e10900",
+  "choice": 2
+ },
+ {
+  "file": "job_180",
+  "job": "火守り",
+  "eraId": "e10900",
+  "choice": 3
+ },
+ {
+  "file": "job_181",
+  "job": "記録者",
+  "eraId": "e10900",
+  "choice": 4
+ }
+]
