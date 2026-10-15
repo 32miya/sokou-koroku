@@ -164,6 +164,12 @@ h2{font-size:20px}
 .stats dt{font-size:10px;letter-spacing:.14em;color:var(--dim)}
 .stats dd{margin:0;font-family:var(--f-disp);font-weight:800;font-size:18px;color:var(--gold);font-variant-numeric:tabular-nums}
 .stats .wide dd{font-size:15px}
+.intro-details>summary{cursor:pointer;list-style:none;color:var(--gold);font-size:13px;padding:4px 0;user-select:none}
+.intro-details>summary::-webkit-details-marker{display:none}
+.intro-details>summary::after{content:' ▶';font-size:10px}
+.intro-details[open]>summary::after{content:' ▼'}
+.intro-details .howto,.intro-details .stats{margin-top:10px}
+.intro-go{position:sticky;bottom:0;display:flex;flex-direction:column;padding:16px 0 20px;background:linear-gradient(transparent,var(--bg) 36%)}
 
 /* ヘルプ */
 .st-left{display:inline-flex;align-items:center;gap:8px}

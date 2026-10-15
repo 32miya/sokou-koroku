@@ -187,20 +187,25 @@ function intro(){
     <h1>祖先遡行録</h1>
     ${clueBox('実家の押し入れの奥から、古い木箱が出てきた。蓋には見覚えのない渦の印。開けた瞬間、あなたの血に眠っていた記録が動き出す。','発端')}
     <p class="lead">問いに答えるたび、あなたの血は一世代ずつ過去へさかのぼる。どの時代の祖先も、なぜか同じ渦の印を残している。印をたどって、記録が途切れる場所まで。</p>
-    <ul class="howto">
-      <li><b>祖先の問い</b>その時代の口調で問われます。答えが祖先の生業と居場所を決めます。</li>
-      <li><b>記録の照合</b>ときおり史実の真偽を問われます。正解すると「真実の欠片」が手に入り、四つ揃えると隠された頁が開きます。</li>
-      <li><b>血の囁き</b>時代の合間に、正体の知れない声があなた自身に問いかけてきます。</li>
-      <li><b>毎回ちがう系譜</b>たどる時代も、問いの言い回しも、祖先の名前も、遊ぶたびに入れ替わります。</li>
-    </ul>
-    ${(()=>{const s=contentStats();return `<dl class="stats">
-      <div><dt>時代</dt><dd>${s.eras}</dd></div><div><dt>祖先</dt><dd>${s.ancestors}</dd></div>
-      <div><dt>人物</dt><dd>${s.persons.toLocaleString('ja-JP')}</dd></div><div><dt>問いの型</dt><dd>${s.questions}</dd></div>
-      <div><dt>照合</dt><dd>${s.quizzes}</dd></div><div><dt>囁き</dt><dd>${s.whispers}</dd></div>
-      <div class="wide"><dt>系譜の組み合わせ</dt><dd>${s.routes.toLocaleString('ja-JP')} 通り × 結末5種</dd></div></dl>`})()}
+    <details class="intro-details">
+      <summary>初めての方へ</summary>
+      <ul class="howto">
+        <li><b>祖先の問い</b>その時代の口調で問われます。答えが祖先の生業と居場所を決めます。</li>
+        <li><b>記録の照合</b>ときおり史実の真偽を問われます。正解すると「真実の欠片」が手に入り、四つ揃えると隠された頁が開きます。</li>
+        <li><b>血の囁き</b>時代の合間に、正体の知れない声があなた自身に問いかけてきます。</li>
+        <li><b>毎回ちがう系譜</b>たどる時代も、問いの言い回しも、祖先の名前も、遊ぶたびに入れ替わります。</li>
+      </ul>
+      ${(()=>{const s=contentStats();return `<dl class="stats">
+        <div><dt>時代</dt><dd>${s.eras}</dd></div><div><dt>祖先</dt><dd>${s.ancestors}</dd></div>
+        <div><dt>人物</dt><dd>${s.persons.toLocaleString('ja-JP')}</dd></div><div><dt>問いの型</dt><dd>${s.questions}</dd></div>
+        <div><dt>照合</dt><dd>${s.quizzes}</dd></div><div><dt>囁き</dt><dd>${s.whispers}</dd></div>
+        <div class="wide"><dt>系譜の組み合わせ</dt><dd>${s.routes.toLocaleString('ja-JP')} 通り × 結末5種</dd></div></dl>`})()}
+    </details>
     <p class="lead">くわしい遊び方と更新情報は <button class="help-link" id="introHelp" type="button">ヘルプ</button>（? キー）で読めます。</p>
+  </section>
+  <div class="intro-go">
     <button class="btn" id="go">木箱を開ける</button>
-  </section>`;
+  </div>`;
   st.phase='intro';st.resume=null;
   $('#go').onclick=()=>question();
   $('#introHelp').onclick=()=>openHelp('how');
