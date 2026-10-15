@@ -1084,5 +1084,149 @@
   "job": "記録者",
   "eraId": "e10900",
   "choice": 4
+ },
+ {
+  "file": "job_182",
+  "job": "製糸工場の繰糸工",
+  "eraId": "e1910",
+  "choice": 0
+ },
+ {
+  "file": "job_183",
+  "job": "坑夫",
+  "eraId": "e1910",
+  "choice": 1
+ },
+ {
+  "file": "job_184",
+  "job": "港の沖仲仕",
+  "eraId": "e1910",
+  "choice": 2
+ },
+ {
+  "file": "job_185",
+  "job": "活版印刷工",
+  "eraId": "e1910",
+  "choice": 3
+ },
+ {
+  "file": "job_186",
+  "job": "巡査",
+  "eraId": "e1910",
+  "choice": 4
+ },
+ {
+  "file": "job_187",
+  "job": "麓の村の名主",
+  "eraId": "e1707",
+  "choice": 0
+ },
+ {
+  "file": "job_188",
+  "job": "陶工",
+  "eraId": "e1707",
+  "choice": 1
+ },
+ {
+  "file": "job_189",
+  "job": "駿河湾の漁師",
+  "eraId": "e1707",
+  "choice": 2
+ },
+ {
+  "file": "job_190",
+  "job": "物好きな商家の隠居",
+  "eraId": "e1707",
+  "choice": 3
+ },
+ {
+  "file": "job_191",
+  "job": "飛脚",
+  "eraId": "e1707",
+  "choice": 4
+ },
+ {
+  "file": "job_192",
+  "job": "惣村の庄屋",
+  "eraId": "e1488",
+  "choice": 0
+ },
+ {
+  "file": "job_193",
+  "job": "寺の鐘を守る下人",
+  "eraId": "e1488",
+  "choice": 1
+ },
+ {
+  "file": "job_194",
+  "job": "手取川の渡し守",
+  "eraId": "e1488",
+  "choice": 2
+ },
+ {
+  "file": "job_195",
+  "job": "末寺の坊主",
+  "eraId": "e1488",
+  "choice": 3
+ },
+ {
+  "file": "job_196",
+  "job": "惣村の文書役",
+  "eraId": "e1488",
+  "choice": 4
+ },
+ {
+  "file": "job_197",
+  "job": "荘園の百姓",
+  "eraId": "e1336",
+  "choice": 0
+ },
+ {
+  "file": "job_198",
+  "job": "野鍛冶",
+  "eraId": "e1336",
+  "choice": 1
+ },
+ {
+  "file": "job_199",
+  "job": "廻船の水手",
+  "eraId": "e1336",
+  "choice": 2
+ },
+ {
+  "file": "job_200",
+  "job": "写経・写本の僧",
+  "eraId": "e1336",
+  "choice": 3
+ },
+ {
+  "file": "job_201",
+  "job": "伊賀の山道を知る国人",
+  "eraId": "e672",
+  "choice": 0
+ },
+ {
+  "file": "job_202",
+  "job": "軍の武具を打つ鍛冶",
+  "eraId": "e672",
+  "choice": 1
+ },
+ {
+  "file": "job_203",
+  "job": "琵琶湖の舟人",
+  "eraId": "e672",
+  "choice": 2
+ },
+ {
+  "file": "job_204",
+  "job": "山の陰陽師",
+  "eraId": "e672",
+  "choice": 3
+ },
+ {
+  "file": "job_205",
+  "job": "詔を写す史",
+  "eraId": "e672",
+  "choice": 4
  }
 ]
