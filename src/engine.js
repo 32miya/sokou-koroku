@@ -383,9 +383,6 @@ function ending(){
       </div>
       <p class="lead">${COMPAT[key][compatKey]}</p>
       ${st.answers.length?`<p class="eyebrow" style="margin-top:6px">囁きへの答え</p><ul class="w-list">${st.answers.map(a=>`<li style="--c:${TAGS[a.t].c}"><span>${a.q}</span><b>${a.a}</b></li>`).join('')}</ul>`:''}
-      <p class="eyebrow" style="margin-top:6px">系譜</p>
-      <ol class="tree">${st.lineage.map(l=>{const f=fmtYear(l.year);return `<li style="--c:${TAGS[l.t].c}"><span class="y">${f.pre} ${f.num}年</span><span class="j"><em>${l.t}</em>${l.job}<span class="lv" style="margin-left:6px">${l.lv}</span><small>${l.who}・${l.place}</small></span></li>`}).join('')}
-      <li style="--c:${TAGS[key].c}"><span class="y">${E.pre} ${E.num}</span><span class="j"><em>${key}</em>${E.job}<small>${E.place}</small></span></li></ol>
       <button class="btn ghost" id="again">別の血をたどり直す</button>
     </section>`;
     $('#again').onclick=intro;
