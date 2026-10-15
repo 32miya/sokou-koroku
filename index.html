@@ -123,6 +123,9 @@ h2{font-size:20px}
 .blood span{background:var(--c)}
 .legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums}
 .legend b{color:var(--c);font-family:var(--f-disp)}
+.compat-pair{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:6px 0 4px}
+.compat-tag{font-size:13px;font-weight:700;color:var(--c);border:1px solid var(--c);padding:3px 10px;border-radius:2px;font-family:var(--f-disp)}
+.compat-sep{color:var(--dim);font-weight:700;font-size:16px}
 .tree{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
 .tree li{display:grid;grid-template-columns:7.2em 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:13px}
 .tree li .y{font-family:var(--f-mono);color:var(--dim);font-size:11.5px;font-variant-numeric:tabular-nums;padding-top:1px}
@@ -1783,6 +1786,35 @@ const TRUTH={
  書:'この記録を最後まで正しく読み解いた者は、記録者の後継となる。あなたが今読んだ文章は、あなた自身が書いたものだ。次の頁は白紙のまま、あなたを待っている。'
 };
 
+/* 血の相性：自分の起源と、相性のいい起源の組み合わせコメント */
+const COMPAT={
+ 海:{
+  星:'海から来た者と星から来た者。別々の場所から流れ着いた二人は、同じ渦の印を持っていた。',
+  地:'深い海の底と、深い地の底。限りなく潜った先で、あなたたちは出会う。',
+  火:'海はいつか火を消す。火はいつか海を干す。互いを消せる者だけが、互いに惹かれる。',
+  書:'沈んだ大陸の最後の記録は、まだ海の底にある。それを探しているのが、書の一族だ。'},
+ 星:{
+  海:'宇宙から見れば、海も星も同じ光だ。遠い場所から来た二人は、地球の上でようやく会う。',
+  地:'地の底へ続く螺旋と、星へ続く軌跡は、同じ形をしている。',
+  火:'星も炎も、暗闇の中でしか見えない。あなたたちは、夜にだけ出会える。',
+  書:'宇宙のすべての記録には、星から来た者の章がある。書の一族は、そのページを探している。'},
+ 地:{
+  海:'地の底は、いつか海の底とつながる。門番と沈んだ民は、最後に同じ暗闇に行き着く。',
+  星:'地底の都の天井には、星の地図が描かれているという。案内してもらえるかもしれない。',
+  火:'地の底で燃え続ける火がある。門番と鍛冶は、ずっとその火の両側にいた。',
+  書:'地の底の記録は、誰にも読まれていない。開けられるのは、書の一族だけかもしれない。'},
+ 火:{
+  海:'文明を終わらせた炎と、大陸を飲み込んだ海。二つは同じ力の、違う名前だ。',
+  星:'鍛冶の炉は、地上の星だ。星から来た者には、その火が見覚えがあるはずだ。',
+  地:'地の底の火が、鍛冶の炉を熱し続けている。あなたたちは、同じ火を分けている。',
+  書:'焼かれた書物も、鍛えられた刃も、同じものを次の世代へ渡している。'},
+ 書:{
+  海:'沈んだ大陸の最後の記録は、まだ誰も読んでいない。それを読める者を、ずっと待っている。',
+  星:'宇宙の記録には、書いた者がいる。星から来た者が、最初の記録者だったのかもしれない。',
+  地:'地の底の秘密は、すでに記録されている。ただ、開ける者が来るのを待っている。',
+  火:'燃やされた書物も、渡された残り火も、次の世代への伝言だ。'}
+};
+
 /* ===== content/job_icons.js ===== */
 /* ===== 生業アイコン（tools/pack_icons.py が自動生成。手で編集しない） ===== */
 ROOTS.addJobIcons({
@@ -2851,6 +2883,14 @@ function pickEnding(){
   for(let i=st.lineage.length-1;i>=0;i--) if(tied.includes(st.lineage[i].t)) return st.lineage[i].t;
   return tied[0];
 }
+function pickCompat(key){
+  const others=Object.entries(st.tags).filter(([k])=>k!==key);
+  const max2=Math.max(...others.map(([,v])=>v));
+  const tied2=others.filter(([,v])=>v===max2).map(([k])=>k);
+  if(tied2.length===1)return tied2[0];
+  for(let i=st.lineage.length-1;i>=0;i--) if(tied2.includes(st.lineage[i].t)) return st.lineage[i].t;
+  return tied2[0];
+}
 
 function ending(){
   const key=pickEnding(),E=ENDINGS[key];
@@ -2873,6 +2913,7 @@ function ending(){
   function show(){
     const keys=Object.keys(TAGS),total=Object.values(st.tags).reduce((a,b)=>a+b,0)||1;
     const got=[...st.quizAt].filter(i=>st.qpick[i]===0).length;
+    const compatKey=pickCompat(key);const CE=ENDINGS[compatKey];
     const truth=got===QUIZ_PER_RUN
       ?`<section class="card truth"><p class="eyebrow">隠された頁・真実の欠片 ${got}/${QUIZ_PER_RUN}</p><h2>すべての照合に成功した者だけが読める頁</h2><p class="story">${TRUTH[key]}</p></section>`
       :`<section class="card"><p class="eyebrow">隠された頁</p><p class="lead">真実の欠片 ${got}/${QUIZ_PER_RUN}。四つすべてを揃えた者にだけ、この先の頁が開く。たどる時代は毎回変わる。</p></section>`;
@@ -2893,6 +2934,13 @@ function ending(){
       <p class="eyebrow">血の配合</p>
       <div class="blood">${keys.map(k=>st.tags[k]?`<span style="--c:${TAGS[k].c};flex:${st.tags[k]}"></span>`:'').join('')}</div>
       <div class="legend">${keys.map(k=>`<span style="--c:${TAGS[k].c}"><b>${k}</b> ${Math.round(st.tags[k]/total*100)}%</span>`).join('')}</div>
+      <p class="eyebrow" style="margin-top:10px">血の相性</p>
+      <div class="compat-pair">
+        <span class="compat-tag" style="--c:${TAGS[key].c}">${key} ${E.title}</span>
+        <span class="compat-sep">×</span>
+        <span class="compat-tag" style="--c:${TAGS[compatKey].c}">${compatKey} ${CE.title}</span>
+      </div>
+      <p class="lead">${COMPAT[key][compatKey]}</p>
       ${st.answers.length?`<p class="eyebrow" style="margin-top:6px">囁きへの答え</p><ul class="w-list">${st.answers.map(a=>`<li style="--c:${TAGS[a.t].c}"><span>${a.q}</span><b>${a.a}</b></li>`).join('')}</ul>`:''}
       <p class="eyebrow" style="margin-top:6px">系譜</p>
       <ol class="tree">${st.lineage.map(l=>{const f=fmtYear(l.year);return `<li style="--c:${TAGS[l.t].c}"><span class="y">${f.pre} ${f.num}年</span><span class="j"><em>${l.t}</em>${l.job}<span class="lv" style="margin-left:6px">${l.lv}</span><small>${l.who}・${l.place}</small></span></li>`}).join('')}

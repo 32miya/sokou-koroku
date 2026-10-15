@@ -324,6 +324,14 @@ function pickEnding(){
   for(let i=st.lineage.length-1;i>=0;i--) if(tied.includes(st.lineage[i].t)) return st.lineage[i].t;
   return tied[0];
 }
+function pickCompat(key){
+  const others=Object.entries(st.tags).filter(([k])=>k!==key);
+  const max2=Math.max(...others.map(([,v])=>v));
+  const tied2=others.filter(([,v])=>v===max2).map(([k])=>k);
+  if(tied2.length===1)return tied2[0];
+  for(let i=st.lineage.length-1;i>=0;i--) if(tied2.includes(st.lineage[i].t)) return st.lineage[i].t;
+  return tied2[0];
+}
 
 function ending(){
   const key=pickEnding(),E=ENDINGS[key];
@@ -346,6 +354,7 @@ function ending(){
   function show(){
     const keys=Object.keys(TAGS),total=Object.values(st.tags).reduce((a,b)=>a+b,0)||1;
     const got=[...st.quizAt].filter(i=>st.qpick[i]===0).length;
+    const compatKey=pickCompat(key);const CE=ENDINGS[compatKey];
     const truth=got===QUIZ_PER_RUN
       ?`<section class="card truth"><p class="eyebrow">隠された頁・真実の欠片 ${got}/${QUIZ_PER_RUN}</p><h2>すべての照合に成功した者だけが読める頁</h2><p class="story">${TRUTH[key]}</p></section>`
       :`<section class="card"><p class="eyebrow">隠された頁</p><p class="lead">真実の欠片 ${got}/${QUIZ_PER_RUN}。四つすべてを揃えた者にだけ、この先の頁が開く。たどる時代は毎回変わる。</p></section>`;
@@ -366,6 +375,13 @@ function ending(){
       <p class="eyebrow">血の配合</p>
       <div class="blood">${keys.map(k=>st.tags[k]?`<span style="--c:${TAGS[k].c};flex:${st.tags[k]}"></span>`:'').join('')}</div>
       <div class="legend">${keys.map(k=>`<span style="--c:${TAGS[k].c}"><b>${k}</b> ${Math.round(st.tags[k]/total*100)}%</span>`).join('')}</div>
+      <p class="eyebrow" style="margin-top:10px">血の相性</p>
+      <div class="compat-pair">
+        <span class="compat-tag" style="--c:${TAGS[key].c}">${key} ${E.title}</span>
+        <span class="compat-sep">×</span>
+        <span class="compat-tag" style="--c:${TAGS[compatKey].c}">${compatKey} ${CE.title}</span>
+      </div>
+      <p class="lead">${COMPAT[key][compatKey]}</p>
       ${st.answers.length?`<p class="eyebrow" style="margin-top:6px">囁きへの答え</p><ul class="w-list">${st.answers.map(a=>`<li style="--c:${TAGS[a.t].c}"><span>${a.q}</span><b>${a.a}</b></li>`).join('')}</ul>`:''}
       <p class="eyebrow" style="margin-top:6px">系譜</p>
       <ol class="tree">${st.lineage.map(l=>{const f=fmtYear(l.year);return `<li style="--c:${TAGS[l.t].c}"><span class="y">${f.pre} ${f.num}年</span><span class="j"><em>${l.t}</em>${l.job}<span class="lv" style="margin-left:6px">${l.lv}</span><small>${l.who}・${l.place}</small></span></li>`}).join('')}
