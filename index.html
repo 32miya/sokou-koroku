@@ -88,11 +88,14 @@ body{background:var(--texbg);background-attachment:fixed;color:var(--paper);tran
 .status{background:linear-gradient(var(--bg2),var(--bg2a));border:1px solid var(--line);border-radius:4px;padding:12px 14px}
 .st-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:2px 8px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;margin-bottom:6px}
 .st-era{color:var(--gold);font-family:var(--f-disp);font-weight:700;letter-spacing:.06em;text-transform:none;font-size:14px}
-.st-grid{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:13px;border-top:1px dashed var(--line);padding-top:8px}
-.st-grid dt{color:var(--dim);font-size:11px;letter-spacing:.14em;padding-top:2px}
-.st-grid dd{margin:0;min-width:0;overflow-wrap:anywhere}
-.st-grid dd.unk{color:var(--dim)}
-.meters{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.st-grid{display:flex;gap:4px 20px;font-size:13px;border-top:1px dashed var(--line);padding-top:6px;flex-wrap:wrap}
+.st-grid div{display:flex;align-items:baseline;gap:5px}
+.st-grid dt{color:var(--dim);font-size:11px;letter-spacing:.14em}
+.st-grid dd{margin:0}
+.meters-wrap{margin-top:8px}
+.meter-label{margin:0 0 5px;font-size:10px;letter-spacing:.14em;color:var(--dim);display:flex;align-items:baseline;gap:8px;text-transform:uppercase}
+.meter-label span{font-size:10px;letter-spacing:.04em;text-transform:none;opacity:.75}
+.meters{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
 .meter{display:flex;flex-direction:column;align-items:center;gap:3px}
 .meter b{font-family:var(--f-disp);font-size:13px;font-weight:700;color:var(--c)}
 .meter i{display:block;width:100%;height:3px;background:var(--line);border-radius:2px;overflow:hidden}
@@ -183,6 +186,8 @@ h2{font-size:20px}
 .stats dt{font-size:10px;letter-spacing:.14em;color:var(--dim)}
 .stats dd{margin:0;font-family:var(--f-disp);font-weight:800;font-size:18px;color:var(--gold);font-variant-numeric:tabular-nums}
 .stats .wide dd{font-size:15px}
+.intro-hook{margin:0;font-size:14px;font-weight:700;color:var(--gold);letter-spacing:.04em}
+.eyebrow-sub{color:var(--dim);font-size:10px;letter-spacing:.08em;font-weight:400}
 .intro-details>summary{cursor:pointer;list-style:none;color:var(--gold);font-size:13px;padding:4px 0;user-select:none}
 .intro-details>summary::-webkit-details-marker{display:none}
 .intro-details>summary::after{content:' ▶';font-size:10px}
@@ -400,11 +405,13 @@ body.whisper-mode::after{content:"";position:fixed;inset:0;z-index:4;pointer-eve
     <header class="status">
       <div class="st-head"><span class="st-left"><span class="st-brand">Record of Lineage</span><button class="tool-btn" id="lineBtn" type="button" aria-haspopup="dialog" aria-controls="lineage">系譜</button><button class="tool-btn" id="sndBtn" type="button" aria-pressed="false">音 切</button><button class="help-btn" id="helpBtn" type="button" aria-haspopup="dialog" aria-controls="help" title="ヘルプ（?キー）">？<span class="sr">ヘルプ</span><i class="help-new" id="helpNew" hidden></i></button></span><span class="st-era" id="sEra">令和8年・現代</span></div>
       <dl class="st-grid">
-        <dt>世代</dt><dd id="sGen">あなた</dd>
-        <dt>暮らし</dt><dd id="sLife" class="unk">—</dd>
-        <dt>欠片</dt><dd id="sFrag"></dd>
+        <div><dt>世代</dt><dd id="sGen">あなた</dd></div>
+        <div><dt>欠片</dt><dd id="sFrag"></dd></div>
       </dl>
-      <div class="meters" id="meters"></div>
+      <div class="meters-wrap">
+        <p class="meter-label">血の気配<span>選択が積み重なるほど、起源に近づく</span></p>
+        <div class="meters" id="meters"></div>
+      </div>
     </header>
     <main id="stage"></main>
   </div>
@@ -855,8 +862,9 @@ e10900:{year:-10900,era:'最終氷期の終わり',lead:'空ヨリ火、降ル�
    band: 所属する帯 / questions: 設問の言い換え（選択肢はそのまま使える問い方にする）
    quizzes: 追加の照合問題（opts[0]が正解）/ female: 女性の祖先の選択肢番号 */
 ROOTS.patch('e2026',{band:'現代',
+  lead:'ピロン♪ 記録アプリが起動しました。対象：いまスマホを握っているあなた。あなたの選択が、血の気配（海・星・地・火・書）を決めます。正解はありません。',
   questions:[{q:'正直、ふとした瞬間に「ここ、前にも来た」って感じるのはどんな時？'},
-             {lead:'通知が一件。「あなたの記録が見つかりました」。差出人は不明。',q:'最近いちばん、理由もなく胸がざわついたのはどんな時？'}]});
+             {lead:'通知が一件。「あなたの記録が見つかりました」。差出人は不明。正解はありません。何に引かれるかが、答えです。',q:'最近いちばん、理由もなく胸がざわついたのはどんな時？'}]});
 
 ROOTS.patch('e1946',{band:'近代',
   questions:[{lead:'昭和二十一年、闇市の喧騒。復員の列と、配給の行列が交差しとります。',q:'闇市の人混みの中、あんたの祖父さんが肌身離さず持っておったのは、何だったかね？'}],
@@ -2673,6 +2681,9 @@ function renderMeters(){
   const max=Math.max(1,...Object.values(st.tags));
   $('#meters').innerHTML=Object.keys(TAGS).map(k=>`<div class="meter" style="--c:${TAGS[k].c};--w:${st.tags[k]/max*100}%"><b>${k}</b><i></i></div>`).join('');
 }
+function renderMeterLabel(){
+  const el=$('#meter-label');if(el)el.hidden=false;
+}
 function renderFrag(){
   const res=[...st.quizAt].sort((a,b)=>a-b).map(i=>st.qpick[i]===undefined?'pending':st.qpick[i]===0?'ok':'ng');
   res.sort((a,b)=>({ok:0,ng:1,pending:2}[a]-{ok:0,ng:1,pending:2}[b]));
@@ -2682,11 +2693,7 @@ function renderFrag(){
 /* temp=true のときは年表から過去を閲覧中の一時表示。戻るときは snap から復元する */
 function setStatus(o,temp){
   if(!temp)Object.assign(st.snap,o);
-  const {era,gen,lv,life}=o;
-  if(life!==undefined){
-    const el=$('#sLife');el.classList.toggle('unk',!life);
-    el.innerHTML=life?`<span class="lv">${lv}</span>${life}`:'？？？';
-  }
+  const {era,gen}=o;
   if(era!==undefined)$('#sEra').textContent=era;
   if(gen!==undefined)$('#sGen').textContent=gen;
 }
@@ -2725,7 +2732,7 @@ function clueText(i){
   if(!c||!c.clue||!next)return '';
   const tail=i+1===st.route.length-1
     ?'印のそばに年号はない。あるのは、空から火が降る絵だけだった。'
-    :`印の傍らには、さらに古い年号が記されていた。──「${next.era}」`;
+    :`印は、さらに古い時代へあなたを引き寄せている。──「${next.era}」`;
   return c.clue+tail;
 }
 function clueBox(text,label,seed){
@@ -2748,7 +2755,7 @@ function markSel(i){
 }
 function viewPast(i){
   const s=st.route[i],c=st.lineage[i],f=fmtYear(s.year);
-  setStatus({era:s.era,gen:genLabel(s.year),lv:c.lv,life:c.short},true);
+  setStatus({era:s.era,gen:genLabel(s.year)},true);
   if(!st.viewing){st.viewing=true;st.skinBefore=FX.current}
   FX.skin(s.band);FX.whisperMode(false);Sound.sfx('tap');
   stage.innerHTML=`<section class="card past">
@@ -2795,12 +2802,13 @@ function animateYear(to,done){
 function intro(){
   reset();FX.whisperMode(false);FX.skin('現代');Sound.ambient('現代');
   renderMeters();renderChrono();renderFrag();
-  setStatus({era:'令和8年・現代',life:'',gen:'あなた'});
+  setStatus({era:'令和8年・現代',gen:'あなた'});
   stage.innerHTML=`<section class="card">
     <p class="eyebrow">ANCESTRAL REGRESSION</p>
     <h1>祖先遡行録</h1>
     ${clueBox('実家の押し入れの奥から、古い木箱が出てきた。蓋には見覚えのない渦の印。開けた瞬間、あなたの血に眠っていた記録が動き出す。','発端')}
     <p class="lead">問いに答えるたび、あなたの血は一世代ずつ過去へさかのぼる。どの時代の祖先も、なぜか同じ渦の印を残している。印をたどって、記録が途切れる場所まで。</p>
+    <p class="intro-hook">問いに正解はない。何に<b>引かれるか</b>が、あなたの血を語る。</p>
     <details class="intro-details">
       <summary>初めての方へ</summary>
       <ul class="howto">
@@ -2827,13 +2835,13 @@ function intro(){
 
 function question(){
   const s=st.route[st.i];
-  setStatus({era:s.era,gen:genLabel(s.year),life:''});
+  setStatus({era:s.era,gen:genLabel(s.year)});
   FX.whisperMode(false);FX.skin(s.band);Sound.ambient(s.band);
   renderChrono();
   const show=()=>{
     const prev=st.lineage[st.i-1],v=s.questions[st.qv[st.i]];
     stage.innerHTML=`<section class="card">
-      <p class="eyebrow">祖先の問い ${st.i+1} / ${st.route.length}</p>
+      <p class="eyebrow">祖先の問い ${st.i+1} / ${st.route.length}<span class="eyebrow-sub"> ── 引かれる方を選ぶ</span></p>
       ${prev?clueBox(clueText(st.i-1),`${prev.who==='名は伝わらない'?prev.job:prev.who}が残した手がかり`,seedOf(prev)):''}
       <p class="lead">${v.lead}</p>
       <h2>${v.q}</h2>
@@ -2852,7 +2860,7 @@ function choose(k){
   st.lineage.push({year:s.year,...c,k,eraId:s.id,band:s.band});
   Sound.sfx('reveal');
   renderMeters();
-  setStatus({lv:c.lv,life:c.short});
+  setStatus({});
   renderChrono();
   showReveal(st.i);
 }
@@ -2963,7 +2971,7 @@ function ending(){
       show();
     });
   });
-  setStatus({era:E.era,gen:'最初のひとり',lv:E.lv,life:E.life});
+  setStatus({era:E.era,gen:'最初のひとり'});
 
   function show(){
     const keys=Object.keys(TAGS),total=Object.values(st.tags).reduce((a,b)=>a+b,0)||1;

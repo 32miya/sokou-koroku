@@ -59,6 +59,9 @@ function renderMeters(){
   const max=Math.max(1,...Object.values(st.tags));
   $('#meters').innerHTML=Object.keys(TAGS).map(k=>`<div class="meter" style="--c:${TAGS[k].c};--w:${st.tags[k]/max*100}%"><b>${k}</b><i></i></div>`).join('');
 }
+function renderMeterLabel(){
+  const el=$('#meter-label');if(el)el.hidden=false;
+}
 function renderFrag(){
   const res=[...st.quizAt].sort((a,b)=>a-b).map(i=>st.qpick[i]===undefined?'pending':st.qpick[i]===0?'ok':'ng');
   res.sort((a,b)=>({ok:0,ng:1,pending:2}[a]-{ok:0,ng:1,pending:2}[b]));
@@ -68,11 +71,7 @@ function renderFrag(){
 /* temp=true のときは年表から過去を閲覧中の一時表示。戻るときは snap から復元する */
 function setStatus(o,temp){
   if(!temp)Object.assign(st.snap,o);
-  const {era,gen,lv,life}=o;
-  if(life!==undefined){
-    const el=$('#sLife');el.classList.toggle('unk',!life);
-    el.innerHTML=life?`<span class="lv">${lv}</span>${life}`:'？？？';
-  }
+  const {era,gen}=o;
   if(era!==undefined)$('#sEra').textContent=era;
   if(gen!==undefined)$('#sGen').textContent=gen;
 }
@@ -111,7 +110,7 @@ function clueText(i){
   if(!c||!c.clue||!next)return '';
   const tail=i+1===st.route.length-1
     ?'印のそばに年号はない。あるのは、空から火が降る絵だけだった。'
-    :`印の傍らには、さらに古い年号が記されていた。──「${next.era}」`;
+    :`印は、さらに古い時代へあなたを引き寄せている。──「${next.era}」`;
   return c.clue+tail;
 }
 function clueBox(text,label,seed){
@@ -134,7 +133,7 @@ function markSel(i){
 }
 function viewPast(i){
   const s=st.route[i],c=st.lineage[i],f=fmtYear(s.year);
-  setStatus({era:s.era,gen:genLabel(s.year),lv:c.lv,life:c.short},true);
+  setStatus({era:s.era,gen:genLabel(s.year)},true);
   if(!st.viewing){st.viewing=true;st.skinBefore=FX.current}
   FX.skin(s.band);FX.whisperMode(false);Sound.sfx('tap');
   stage.innerHTML=`<section class="card past">
@@ -181,12 +180,13 @@ function animateYear(to,done){
 function intro(){
   reset();FX.whisperMode(false);FX.skin('現代');Sound.ambient('現代');
   renderMeters();renderChrono();renderFrag();
-  setStatus({era:'令和8年・現代',life:'',gen:'あなた'});
+  setStatus({era:'令和8年・現代',gen:'あなた'});
   stage.innerHTML=`<section class="card">
     <p class="eyebrow">ANCESTRAL REGRESSION</p>
     <h1>祖先遡行録</h1>
     ${clueBox('実家の押し入れの奥から、古い木箱が出てきた。蓋には見覚えのない渦の印。開けた瞬間、あなたの血に眠っていた記録が動き出す。','発端')}
     <p class="lead">問いに答えるたび、あなたの血は一世代ずつ過去へさかのぼる。どの時代の祖先も、なぜか同じ渦の印を残している。印をたどって、記録が途切れる場所まで。</p>
+    <p class="intro-hook">問いに正解はない。何に<b>引かれるか</b>が、あなたの血を語る。</p>
     <details class="intro-details">
       <summary>初めての方へ</summary>
       <ul class="howto">
@@ -213,13 +213,13 @@ function intro(){
 
 function question(){
   const s=st.route[st.i];
-  setStatus({era:s.era,gen:genLabel(s.year),life:''});
+  setStatus({era:s.era,gen:genLabel(s.year)});
   FX.whisperMode(false);FX.skin(s.band);Sound.ambient(s.band);
   renderChrono();
   const show=()=>{
     const prev=st.lineage[st.i-1],v=s.questions[st.qv[st.i]];
     stage.innerHTML=`<section class="card">
-      <p class="eyebrow">祖先の問い ${st.i+1} / ${st.route.length}</p>
+      <p class="eyebrow">祖先の問い ${st.i+1} / ${st.route.length}<span class="eyebrow-sub"> ── 引かれる方を選ぶ</span></p>
       ${prev?clueBox(clueText(st.i-1),`${prev.who==='名は伝わらない'?prev.job:prev.who}が残した手がかり`,seedOf(prev)):''}
       <p class="lead">${v.lead}</p>
       <h2>${v.q}</h2>
@@ -238,7 +238,7 @@ function choose(k){
   st.lineage.push({year:s.year,...c,k,eraId:s.id,band:s.band});
   Sound.sfx('reveal');
   renderMeters();
-  setStatus({lv:c.lv,life:c.short});
+  setStatus({});
   renderChrono();
   showReveal(st.i);
 }
@@ -349,7 +349,7 @@ function ending(){
       show();
     });
   });
-  setStatus({era:E.era,gen:'最初のひとり',lv:E.lv,life:E.life});
+  setStatus({era:E.era,gen:'最初のひとり'});
 
   function show(){
     const keys=Object.keys(TAGS),total=Object.values(st.tags).reduce((a,b)=>a+b,0)||1;
